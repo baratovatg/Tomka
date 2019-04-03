@@ -6,10 +6,8 @@ CONFIG -= qt
 SOURCES += \
         main.cpp \
     animals.cpp \
-    trees.cpp \
-    beasts.cpp
+    trees.cpp
 
 HEADERS += \
     animals.h \
-    trees.h \
-    beasts.h
+    trees.h
