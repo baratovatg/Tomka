@@ -1,8 +1,10 @@
 #ifndef ANIMALS_H
 #define ANIMALS_H
 #include <string>
-#include <main.cpp>
-a = 0;
+#include <cstdlib>
+
+struct point{int x; int y;};
+
 class animals
 {
 private:
@@ -16,23 +18,24 @@ private:
     int age_;
     int max_age_;
     int reprod_age_;
+    int reprod_last_;
     int reprod_period_;
     int generation_;
     int hunger_;
+    point coord_;
+
 
 public:
     animals( bool sex, int age, int generation);
     void moving();
-    void change_hunger();
-    void change_age();
-    bool birth();
-    std::string get_kind();
+    void add_age();
     int get_age();
-    int get_sex();
+    std::string get_sex();
     int get_generation();
     int get_hunger();
-    int add_hunger();
-    int lose_hunger();
+    void add_hunger(int meal);
+    void lose_hunger();
+    std::string get_kind();
 };
 
 #endif // ANIMALS_H
