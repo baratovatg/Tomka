@@ -11,12 +11,12 @@ void animals::moving(){
     if (generation == 0){
         coord_.x--;
     } else if (generation == 1){
-            coord_.y++;
-        } else if (generation == 2){
-                coord_.x++;
-            } else if (generation == 3){
-                    coord_.y--;
-                }
+        coord_.y++;
+    } else if (generation == 2){
+        coord_.x++;
+    } else if (generation == 3){
+        coord_.y--;
+    }
 }
 
 void animals::add_age(){
@@ -31,7 +31,7 @@ std::string animals::get_sex() {
     if (sex_ == 0) {
         return "male";
     } else {
-        return "women";
+        return "female";
     }
 }
 
