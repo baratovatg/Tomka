@@ -13,7 +13,7 @@ public:
     soil(unsigned int size);
     void eat_grass(unsigned int i);
     void change_status(unsigned int i);
-    std::string get_status(unsigned int i);
+    type get_status(unsigned int i);
 };
 
 #endif // SOIL_H

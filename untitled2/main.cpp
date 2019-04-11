@@ -1,14 +1,15 @@
 #include <iostream>
+#include "soil.h"
 
-using namespace std;
 
 int main()
 {
-    int a;
-    a = 12;
-    cout << a;
-    enum r {q, y};
-    r t = q;
-    cout << t;
+    unsigned int size;
+    std::cin >> size;
+    soil ter(size);
+    for (unsigned int i = 1; i <= size*size; i++){
+        std::cout << ter.get_status(i-1) << ' ';
+        if (i % (size) == 0) std::cout << std::endl;
+    }
     return 0;
 }

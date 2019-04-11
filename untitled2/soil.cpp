@@ -1,9 +1,10 @@
 #include "soil.h"
+
 soil::soil(unsigned int size){
     for (unsigned int i = 0; i < size*size; i++){
         field_.push_back(static_cast<type>(rand()%3));
     }
-    size_ = field_.size()*field_.size();
+    size_ = field_.size();
     for (unsigned int i = 0; i < size_/10; i++){
         soil::generate_tree();
     }
@@ -39,20 +40,20 @@ void soil::change_status(unsigned int i){
     }
 }
 
-std::string soil::get_status(unsigned int i){
+type soil::get_status(unsigned int i){
     if (field_[i] == empty) {
-        return "empty";
+        return empty;
     }
     else if (field_[i] == little_grass) {
-        return "little_grass";
+        return little_grass;
     }
     else if (field_[i] == adult_grass) {
-        return "adult_grass";
+        return adult_grass;
     }
     else if (field_[i] == eaten_grass) {
-        return "eaten_grass";
+        return eaten_grass;
     }
     else {
-        return "tree";
+        return tree;
     }
 }
